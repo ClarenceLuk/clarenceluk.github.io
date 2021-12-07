@@ -4,12 +4,13 @@ import Menu from './Menu/Menu.js'
 import Weather from './Applets/Weather.js'
 import {
   BrowserRouter as Router,
-  Switch,
+  Routes,
   Route,
   Link
 } from "react-router-dom";
 import { makeStyles } from '@material-ui/core';
 import { findByLabelText } from '@testing-library/react';
+import Home from './Applets/Home';
 
 const useStyles = makeStyles(theme => {
   console.log(theme)
@@ -30,14 +31,17 @@ const useStyles = makeStyles(theme => {
 const App = () => {
   const classes = useStyles()
   return (
+    <Router>
       <div class={classes.appBox}>
         <div class={classes.menuBox}>
           <Menu />
-          
         </div>
-        <Weather />
-        <Link to="/Applets">Weather</Link>
+        <Routes>
+          <Route path="/" element={<Home/>}/>
+          <Route path="/Weather" element={<Weather/>}/>
+        </Routes>
       </div>
+    </Router>
   );
 }
 

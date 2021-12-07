@@ -28,8 +28,8 @@ const Menu = () => {
             <div>
                 <Drawer open>
                     Hello World
+                    <Link to="/">Home</Link>
                     <Link to="/Weather">Weather</Link>
-                    <Link to="/Home">Home</Link>
                 </Drawer>
             </div>
         </div>
