@@ -1,6 +1,12 @@
 import React, { useState } from 'react';
 import { makeStyles } from '@material-ui/core';
 import { Drawer } from '@material-ui/core';
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route,
+    Link
+  } from "react-router-dom";
 
 const useStyles = makeStyles(theme => {
     console.log(theme)
@@ -22,6 +28,8 @@ const Menu = () => {
             <div>
                 <Drawer open>
                     Hello World
+                    <Link to="/Weather">Weather</Link>
+                    <Link to="/Home">Home</Link>
                 </Drawer>
             </div>
         </div>

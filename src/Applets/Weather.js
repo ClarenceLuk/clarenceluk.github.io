@@ -8,7 +8,9 @@ const Weather = () => {
     
     return (
         <div>
-            Weather!
+            Weather!000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
         </div>
     )
 }
+
+export default Weather
