@@ -21,7 +21,7 @@ const useStyles = makeStyles(theme => {
     },
     menuBox: {
       height: theme.spacing(0),
-      width: theme.spacing(11),
+      width: theme.spacing(15),
     },
     menuText: {
       color: theme.palette.text.secondary,

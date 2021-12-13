@@ -14,7 +14,7 @@ const useStyles = makeStyles(theme => {
     {
         menuBox: {
             height: theme.spacing(0),
-            width: theme.spacing(0),
+            width: theme.spacing(11),
         },
         menuText: {
             color: theme.palette.text.secondary,
@@ -23,15 +23,13 @@ const useStyles = makeStyles(theme => {
 
 const Menu = () => {
     const classes = useStyles();
+
     return (
-        <div className={classes.menuBox}>
-            <div>
-                <Drawer open>
-                    Hello World
-                    <Link to="/">Home</Link>
-                    <Link to="/Weather">Weather</Link>
-                </Drawer>
-            </div>
+        <div>
+            <Drawer open className={classes.menuBox}>
+                <Link to="/">Home</Link>
+                <Link to="/Weather">Weather</Link>
+            </Drawer>
         </div>
     )
 }
