@@ -13,8 +13,13 @@ const useStyles = makeStyles(theme => {
     return (
     {
         menuBox: {
+            display: 'flex',
+            flexDirection: 'column',
+            position: 'absolute',
+            top: '2px',
+
             height: theme.spacing(0),
-            width: theme.spacing(11),
+            minWidth: theme.spacing(15),
         },
         menuText: {
             color: theme.palette.text.secondary,
@@ -26,10 +31,10 @@ const Menu = () => {
 
     return (
         <div>
-            <Drawer open className={classes.menuBox}>
+            <div open className={classes.menuBox} BackdropProps={{ invisible: true }} variant='persistant'>
                 <Link to="/">Home</Link>
                 <Link to="/Weather">Weather</Link>
-            </Drawer>
+            </div>
         </div>
     )
 }

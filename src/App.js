@@ -18,13 +18,22 @@ const useStyles = makeStyles(theme => {
   {
     appBox: {
       display: 'flex',
+      flexDirection: 'row',
+      maxWidth: theme.spacing(100),
+      left: theme.spacing(0),
+      top: theme.spacing(2),
     },
     menuBox: {
-      height: theme.spacing(0),
-      width: theme.spacing(15),
+      display: 'flex',
+      flexDirection: 'column',
     },
     menuText: {
       color: theme.palette.text.secondary,
+    },
+    routeBox: {
+      display: 'flex',
+      position: 'relative',
+      left: theme.spacing(10),
     },
   })})
 
@@ -32,14 +41,17 @@ const App = () => {
   const classes = useStyles()
   return (
     <Router>
-      <div class={classes.appBox}>
-        <div class={classes.menuBox}>
+      <div className={classes.appBox}>
+        <div className={classes.menuBox}>
           <Menu />
         </div>
-        <Routes>
-          <Route path="/" element={<Home/>}/>
-          <Route path="/Weather" element={<Weather/>}/>
-        </Routes>
+        <div className={classes.routeBox}>
+          <Routes >
+            <Route path="/" element={<Home/>}/>
+            <Route path="/Weather" element={<Weather/>}/>
+          </Routes>
+        </div>
+        
       </div>
     </Router>
   );
