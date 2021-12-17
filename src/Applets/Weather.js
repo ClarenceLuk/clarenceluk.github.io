@@ -5,13 +5,11 @@ import weatherAPI from "weather-gov-api";
 import WeatherCard from './WeatherComponents/WeatherCard.js'
 
 const useStyles = makeStyles(theme => {
-    console.log(theme)
     return (
         {
             weatherBox: {
                 display: 'flex',
                 flexDirection: 'column',
-                overflow: 'scroll',
             },
         }
         

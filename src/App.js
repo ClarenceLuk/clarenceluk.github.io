@@ -26,6 +26,9 @@ const useStyles = makeStyles(theme => {
     menuBox: {
       display: 'flex',
       flexDirection: 'column',
+      position: 'fixed',
+      top: theme.spacing(2),
+      left: theme.spacing(0)
     },
     menuText: {
       color: theme.palette.text.secondary,
