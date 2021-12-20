@@ -33,8 +33,9 @@ const WeatherCard = ({period}) => {
                 Temperature : {period.temperature} {period.temperatureUnit}
                 <br/>
                 Short Forcast : {period.shortForecast}
+                <br/>
+                Wind: {period.windSpeed} {period.windDirection}
             </div>
-            
             <div>
                 Forcast : {period.detailedForecast}
             </div>

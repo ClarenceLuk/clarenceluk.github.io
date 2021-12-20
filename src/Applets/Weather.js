@@ -37,6 +37,7 @@ const Weather = () => {
         .getForecast("default", latitude, longitude)
         .then((data) => {
             setWeather(data.data.properties.periods)
+            console.log(data.data.properties.periods)
         })
         .catch(err => err).finally();
     }, [latitude, longitude])
