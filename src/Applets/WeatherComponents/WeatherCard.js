@@ -24,11 +24,14 @@ const useStyles = makeStyles(theme => {
 
 const WeatherCard = ({period}) => {
     const classes = useStyles()
+
+    let date = period.startTime.split('T')[0].split('-')
+
     return (
         <div className={classes.cardBox}>
             <div className={classes.basicDescription}>
                 <img className={classes.imgBox} src={period.icon} />
-                {period.name}
+                {period.name} - {date[1]}/{date[2]}/{date[0]}
                 <br/>
                 Temperature : {period.temperature} {period.temperatureUnit}
                 <br/>
