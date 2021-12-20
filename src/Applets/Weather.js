@@ -16,10 +16,6 @@ const useStyles = makeStyles(theme => {
     )
 })
 
-const getWeather = (latitude, longitude) => {
-    
-}
-
 const Weather = () => {
     const [latitude, setLatitude] = useState()
     const [longitude, setLongitude] = useState()
