@@ -1,6 +1,6 @@
-import logo from './logo.svg';
 import './App.css';
 import Menu from './Menu/Menu.js'
+import Home from './Applets/Home';
 import Weather from './Applets/Weather.js'
 import {
   BrowserRouter as Router,
@@ -9,8 +9,6 @@ import {
   Link
 } from "react-router-dom";
 import { makeStyles } from '@material-ui/core';
-import { findByLabelText } from '@testing-library/react';
-import Home from './Applets/Home';
 
 const useStyles = makeStyles(theme => {
   console.log(theme)
@@ -46,15 +44,14 @@ const App = () => {
     <Router>
       <div className={classes.appBox}>
         <div className={classes.menuBox}>
-          <Menu />
+          <Menu/>
         </div>
         <div className={classes.routeBox}>
-          <Routes >
+          <Routes>
             <Route path="/" element={<Home/>}/>
             <Route path="/Weather" element={<Weather/>}/>
           </Routes>
         </div>
-        
       </div>
     </Router>
   );

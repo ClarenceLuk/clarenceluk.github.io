@@ -30,11 +30,9 @@ const Menu = () => {
     const classes = useStyles();
 
     return (
-        <div>
-            <div open className={classes.menuBox} BackdropProps={{ invisible: true }} variant='persistant'>
-                <Link to="/">Home</Link>
-                <Link to="/Weather">Weather</Link>
-            </div>
+        <div open className={classes.menuBox} BackdropProps={{ invisible: true }} variant='persistant'>
+            <Link to="/">Home</Link>
+            <Link to="/Weather">Weather</Link>
         </div>
     )
 }

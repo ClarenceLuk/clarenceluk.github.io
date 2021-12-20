@@ -37,15 +37,14 @@ const Weather = () => {
         .getForecast("default", latitude, longitude)
         .then((data) => {
             setWeather(data.data.properties.periods)
-            console.log(data.data.properties.periods)
         })
-        .catch(err => console.log(err));
+        .catch(err => err).finally();
     }, [latitude, longitude])
 
     return (
         <div className={classes.weatherBox}>
             {weather.map(period => {
-                return ( //TODO: make a card that returns each element in a card
+                return (
                     <WeatherCard period={period} key={period.number}/>
                 )
             })}
