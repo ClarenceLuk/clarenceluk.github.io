@@ -49,7 +49,7 @@ const App = () => {
         <div className={classes.routeBox}>
           <Routes>
             <Route path="/" element={<Home/>}/>
-            <Route path="/#/Weather" element={<Weather/>}/>
+            <Route path="/weather" element={<Weather/>}/>
           </Routes>
         </div>
       </div>
