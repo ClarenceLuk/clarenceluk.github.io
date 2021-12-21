@@ -10,6 +10,7 @@ const useStyles = makeStyles(theme => {
                 border: '1px solid black',
                 borderRadius: '5px',
                 maxWidth: theme.spacing(60),
+                margin: '5px',
             },
             imgBox: {
                 width: theme.spacing(10),
@@ -26,7 +27,7 @@ const WeatherCard = ({period}) => {
     const classes = useStyles()
 
     let date = period.startTime.split('T')[0].split('-')
-
+    let prevDate = date[1]
     return (
         <div className={classes.cardBox}>
             <div className={classes.basicDescription}>

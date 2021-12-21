@@ -10,6 +10,7 @@ const useStyles = makeStyles(theme => {
             weatherBox: {
                 display: 'flex',
                 flexDirection: 'column',
+                margin: '5px',
             },
         }
         
@@ -35,7 +36,7 @@ const Weather = () => {
             setWeather(data.data.properties.periods)
             console.log(data.data.properties.periods)
         })
-        .catch(err => err).finally();
+        .catch(err => err);
     }, [latitude, longitude])
 
     return (
