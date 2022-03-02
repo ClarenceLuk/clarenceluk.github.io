@@ -33,6 +33,7 @@ const Menu = () => {
         <div open className={classes.menuBox} BackdropProps={{ invisible: true }} variant='persistant'>
             <Link to="/">Home</Link>
             <Link to="/weather">Weather</Link>
+            <Link to="/othello">Othello</Link>
         </div>
     )
 }
