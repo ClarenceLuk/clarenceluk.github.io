@@ -7,8 +7,8 @@ const OthelloGame = () => {
 
 
     return (
-        <div>OthelloGame
-            <OthelloBoard props={{player, setPlayer}}/>
+        <div>
+            <OthelloBoard player={player} setPlayer={setPlayer}/>
         </div>
     )
 }

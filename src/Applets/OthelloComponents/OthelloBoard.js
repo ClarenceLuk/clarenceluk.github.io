@@ -19,21 +19,20 @@ const OthelloBoard = (props) => {
     const defaultSize = 8
     const [boardDimension, setBoardDimension] = useState(defaultSize)
     const board = new Array(boardDimension).fill(new Array(boardDimension).fill(-1))
-    // console.log(props)
+
+    console.log("boardLength", props)
 
     const classes = useStyles()
 
     return (
         <div>
-            OthelloBoard
             {board.map((row) => (
-                <div className={classes.boardRow}>
+                <div className={ classes.boardRow }>
                     {row.map((col) => (
-                        <OthelloCell key={[row,col]} props={props.props}/>
+                        <OthelloCell row={row} col={col} player={props.player} setPlayer={props.setPlayer} board={board}/>
                     ))}
                 </div>
                 )
-                
             )}
         </div>
     )

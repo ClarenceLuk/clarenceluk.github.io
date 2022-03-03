@@ -28,13 +28,13 @@ const useStyles = makeStyles((theme) => {
 const OthelloCell = (props) => {
     const [cellColor, setCellColor] = useState(-1)
     const classes = useStyles();
-    console.log(props.props.player)
+    console.log(props)
 
     const onClickEvent = () => {
         console.log("clicked!")
         if (cellColor == -1) {
-            setCellColor(props.props.player)
-            props.props.setPlayer(player => player == 1 ? 0 : 1)
+            setCellColor(props.player)
+            props.setPlayer(player => player == 1 ? 0 : 1)
         }
     }
 
