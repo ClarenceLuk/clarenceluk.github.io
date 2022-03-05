@@ -12,27 +12,39 @@ const useStyles = makeStyles(theme => {
     console.log(theme)
     return (
     {
-        menuBox: {
-            display: 'flex',
-            flexDirection: 'column',
-            position: 'absolute',
-            top: '2px',
-
-            height: theme.spacing(0),
-            minWidth: theme.spacing(15),
+        menuOpen: {
+            width: '30px',
+        },
+        menuClosed: {
+            
         },
         menuText: {
             color: theme.palette.text.secondary,
         },
+        menuButtonOpen: {
+            width: '100px',
+        },
+        menuButtonClosed: {
+            width: '20px',
+        },
+        menuChoiceBox: {
+            display: 'flex',
+            flexDirection: 'column',
+        },
     })})
 
-const Menu = () => {
+const Menu = (props) => {
     const classes = useStyles();
 
     return (
-        <div open className={classes.menuBox} BackdropProps={{ invisible: true }} variant='persistant'>
-            <Link to="/">Home</Link>
-            <Link to="/weather">Weather</Link>
+        <div className={classes.menuOpen}>
+            <button className={props.menuState ? classes.menuButtonOpen : classes.menuButtonClosed} onClick={() => props.setMenuState(menuState => !menuState)}>OpenClose</button>
+            {props.menuState ? (
+                <div className={classes.menuChoiceBox}>
+                    <Link to="/">Home</Link>
+                    <Link to="/weather">Weather</Link>
+                </div>) : null
+            }
         </div>
     )
 }

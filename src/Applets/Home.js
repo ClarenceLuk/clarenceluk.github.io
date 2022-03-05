@@ -13,7 +13,7 @@ const useStyles = makeStyles((theme) => {
 const Home = () => {
     return (
         <div>
-            
+            Home!
         </div>
     )
 }

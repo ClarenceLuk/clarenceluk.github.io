@@ -1,5 +1,6 @@
 import './App.css';
-import Menu from './Menu/Menu.js'
+import React, {useState} from 'react';
+import Menu from './Menu/Menu.js';
 import Home from './Applets/Home';
 import Weather from './Applets/Weather.js'
 import {
@@ -39,12 +40,13 @@ const useStyles = makeStyles(theme => {
   })})
 
 const App = () => {
+  const [menuState, setMenuState] = useState(true)
   const classes = useStyles()
   return (
     <Router>
       <div className={classes.appBox}>
         <div className={classes.menuBox}>
-          <Menu/>
+          <Menu menuState={menuState} setMenuState={setMenuState}/>
         </div>
         <div className={classes.routeBox}>
           <Routes>
