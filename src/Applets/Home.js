@@ -4,7 +4,7 @@ import { makeStyles } from '@material-ui/core'
 const useStyles = makeStyles((theme) => {
     return ({
         home: {
-            background: theme.palette.background,
+            background: 'lavender',
             
         }
     })
@@ -13,7 +13,7 @@ const useStyles = makeStyles((theme) => {
 const Home = () => {
     return (
         <div>
-            Home!!
+            
         </div>
     )
 }
