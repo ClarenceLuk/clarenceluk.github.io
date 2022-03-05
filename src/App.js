@@ -2,7 +2,8 @@ import './App.css';
 import React, {useState} from 'react';
 import Menu from './Menu/Menu.js';
 import Home from './Applets/Home';
-import Weather from './Applets/Weather.js'
+import Weather from './Applets/Weather.js';
+import Othello from './Applets/Othello';
 import {
   BrowserRouter as Router,
   Routes,
@@ -52,6 +53,7 @@ const App = () => {
           <Routes>
             <Route path="/" element={<Home/>}/>
             <Route path="/weather" element={<Weather/>}/>
+            <Route path="/othello" element={<Othello/>}/>
           </Routes>
         </div>
       </div>
