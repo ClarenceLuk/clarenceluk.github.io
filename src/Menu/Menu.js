@@ -42,7 +42,7 @@ const Menu = (props) => {
             {props.menuState ? (
                 <div className={classes.menuChoiceBox}>
                     <Link to="/">Home</Link>
-                    <Link to="/weather">Weather</Link>\
+                    <Link to="/weather">Weather</Link>
                     <Link to="/othello">Othello</Link>
                 </div>) : null
             }

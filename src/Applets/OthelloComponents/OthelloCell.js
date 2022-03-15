@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, memo } from 'react';
 import { makeStyles } from '@material-ui/core';
 
 const useStyles = makeStyles((theme) => {
@@ -34,15 +34,14 @@ const OthelloCell = (props) => {
         console.log("clicked!")
         if (cellColor == -1) {
             setCellColor(props.player)
-            props.setPlayer(player => player == 1 ? 0 : 1)
         }
     }
 
     return (
         <div className={ classes.cell } onClick={() => onClickEvent()}>
-            <div className={ cellColor == 0 ? classes.blackPiece : cellColor == 1 ? classes.whitePiece : null }></div>
+            <div className={ cellColor == 0 ? classes.blackPiece : cellColor == 1 ? classes.whitePiece : null }/>
         </div>
     )
 }
 
-export default OthelloCell;
+export default memo(OthelloCell);

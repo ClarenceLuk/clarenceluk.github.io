@@ -20,16 +20,20 @@ const OthelloBoard = (props) => {
     const [boardDimension, setBoardDimension] = useState(defaultSize)
     const board = new Array(boardDimension).fill(new Array(boardDimension).fill(-1))
 
-    console.log("boardLength", props)
-
     const classes = useStyles()
+
+    const cellClickHandler = (row, col) => {
+        board[row][col] = props.player;
+        console.log("what", board)
+        props.setPlayer(player => player == 1 ? 0 : 1)
+    };
 
     return (
         <div>
-            {board.map((row) => (
+            {board.map((row, i) => (
                 <div className={ classes.boardRow }>
-                    {row.map((col) => (
-                        <OthelloCell row={row} col={col} player={props.player} setPlayer={props.setPlayer} board={board}/>
+                    {row.map((col, j) => (
+                        <OthelloCell onClick={() => cellClickHandler(i, j)} r={i} c={j} player={props.player} board={board}/>
                     ))}
                 </div>
                 )
