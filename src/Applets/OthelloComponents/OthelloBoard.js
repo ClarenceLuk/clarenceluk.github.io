@@ -29,8 +29,11 @@ const OthelloBoard = (props) => {
         setBoard(initialBoard)
     }, [])
 
-
     const classes = useStyles()
+
+    const flipTiles = (player) => {
+        
+    }
 
     const cellClickHandler = (row, col) => {
         if (board[row][col] == -1) {
@@ -41,7 +44,6 @@ const OthelloBoard = (props) => {
             })
             props.setPlayer(player => player == 1 ? 2 : 1)
         }
-        
     };
 
     return (
