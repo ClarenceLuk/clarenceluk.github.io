@@ -4,6 +4,8 @@
  * Copyright 2024 Fonticons, Inc.
  */
 
+/*! decimal.js-light v2.5.1 https://github.com/MikeMcl/decimal.js-light/LICENCE */
+
 /**
  * @license
  * Lodash <https://lodash.com/>
